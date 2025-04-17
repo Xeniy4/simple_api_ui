@@ -19,7 +19,6 @@ body_login = {'Email':login, 'Password':password, 'RememberMe': False}
 
 
 def test_log_in():
-    browser.open(base_url)
     response = requests.post(base_url + endpoint_login, data=body_login, allow_redirects=False)
     cookie = response.cookies.get('NOPCOMMERCE.AUTH')
 
@@ -27,7 +26,7 @@ def test_log_in():
     browser.driver.add_cookie({"name": "NOPCOMMERCE.AUTH", "value": cookie})
     browser.open(base_url)
 
-
     browser.open(base_url)
     browser.element('.account').should(have.text(login))
+
 
