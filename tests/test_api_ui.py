@@ -5,6 +5,8 @@ import pytest
 import requests
 from selene import browser, have
 
+from helpers.api_helper import log_in
+
 
 
 

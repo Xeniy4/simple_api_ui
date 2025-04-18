@@ -23,5 +23,9 @@ def test_shop(log_in):
     #ui_check.check_product_in_cart('Fiction')
 
 
+def test_add_note(log_in):
+    api_method_add.add_note()
+
+
 def test_add_product_in_cart_no_auth():
     pass

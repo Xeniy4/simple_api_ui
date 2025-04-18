@@ -44,3 +44,10 @@ class ApiAddProductInCart:
         )
         assert response.status_code == 200
         return response
+
+
+
+    def add_note(self):
+        response = requests.post(base_url + '/addproducttocart/catalog/72/1/1')
+        assert response.status_code == 200
+        return response
