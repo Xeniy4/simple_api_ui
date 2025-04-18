@@ -1,8 +1,11 @@
 from selene import browser, have
 
-url_card = 'https://demowebshop.tricentis.com/cart'
+url_cart = 'https://demowebshop.tricentis.com/cart'
 
-def check_product_in_card(product):
-    browser.open(url_card)
-    browser.element('.product-name').should(have.text(product))
+
+
+class UiCheckProductInCard:
+    def check_product_in_cart(self, product):
+        browser.open(url_cart)
+        browser.element('.product-name').should(have.text(product))
 
