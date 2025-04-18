@@ -31,10 +31,6 @@ def log_in():
     browser.driver.add_cookie({"name": "NOPCOMMERCE.AUTH", "value": cookie})
     browser.open(base_url)
 
-    # Это тут не нужно
-    # browser.open(base_url)
-    # browser.element('.account').should(have.text(login))
-
 
 def test_add_product_in_card_no_body(log_in):
     response = requests.post(base_url + '/addproducttocart/catalog/72/1/1')
@@ -51,6 +47,7 @@ def test_add_product_in_card_with_body(log_in):
     browser.element('.product-name').should(have.text('Build your own cheap computer'))
 
 
+def test_add_books_in_card():
 
 
 
