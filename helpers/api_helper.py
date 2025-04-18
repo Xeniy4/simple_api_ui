@@ -40,7 +40,7 @@ class ApiAddProductInCart:
         response = requests.post(
             # url='https://demowebshop.tricentis.com/addproducttocart/details/45/1',
             url= 'https://demowebshop.tricentis.com/addproducttocart/catalog/45/1/1',
-            # data={"addtocart_45.EnteredQuantity": "1"}
+            data={"addtocart_45.EnteredQuantity": "1"}
         )
         assert response.status_code == 200
-        #return response
+        return response
